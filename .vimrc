@@ -49,5 +49,16 @@ command! MakeTags !ctags -R .
 let g:netrw_banner=0  " get rid of banner at top
 let g:netrw_liststyle=3  " tree view
 
+" LINE NUMBERS
+set relativenumber
+set number
 
+" INDENTATION
+filetype indent on
+set autoindent
+set smartindent
+set shiftwidth=4 tabstop=4 softtabstop=4
+set expandtab smarttab
+
+" expandtab can cause issues with Makefiles
 
