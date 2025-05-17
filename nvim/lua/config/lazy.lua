@@ -24,5 +24,7 @@ require("lazy").setup({
     install = { colorscheme = { "one" } },
     -- automatically check for plugin updates
     checker = { enabled = true },
+    -- only show last 4 commits in updates
+    git = { log = { "-4" } },
 })
 
