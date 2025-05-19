@@ -38,6 +38,7 @@ return {
                     luasnip.lsp_expand(args.body)
                 end,
             },
+            performance = { max_view_entries = 3 },
             completion = { completeopt = 'menu,menuone,noinsert' },
 
             -- For an understanding of why these mappings were
