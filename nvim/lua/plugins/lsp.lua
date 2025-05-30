@@ -136,7 +136,7 @@ return {
             -- Diagnostic Config
             -- See :help vim.diagnostic.Opts
             -- Disable diagnostics
-            vim.diagnostic.disable()
+            vim.diagnostic.enable(false)
             --[[
             vim.diagnostic.config {
                 severity_sort = true,
