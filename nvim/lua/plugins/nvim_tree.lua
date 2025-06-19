@@ -1,6 +1,7 @@
 return {
     {
         "nvim-tree/nvim-tree.lua",
+        lazy = false,
         opts = {},
         init = function ()
             local map = function(keys, func)
@@ -14,6 +15,15 @@ return {
                 "<F49>",
                 function ()
                     vim.cmd("NvimTreeToggle")
+                end
+            )
+
+            -- open tree by default
+            require("nvim-tree.api").tree.toggle({ focus=false })
+            -- switch to normal window since tree gets due to window race conditions
+            vim.schedule(
+                function ()
+                    vim.cmd("wincmd l")
                 end
             )
         end,
