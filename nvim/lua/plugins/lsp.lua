@@ -93,8 +93,18 @@ return {
                     map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 
                     -- Fuzzy find all the symbols in your current workspace.
-                    --  Similar to document symbols, except searches over your entire project.
-                    map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+                    --  Similar to document symbols, except searches over your entire workspace.
+                    map(
+                        '<leader>ws',
+                        function()
+                            -- from https://github.com/nvim-telescope/telescope.nvim/issues/964#issuecomment-1517629615
+                            vim.ui.input({ prompt = "Workspace symbols: " }, function(query)
+                                require('telescope.builtin').lsp_workspace_symbols({ query = query })
+                            end)
+                        end,
+                        '[W]orkspace [S]ymbols'
+                    )
+                    -- map('<leader>ws', vim.lsp.buf.workspace_symbol, '[W]orkspace [S]ymbols')
 
                     -- Rename the variable under your cursor.
                     --  Most Language Servers support renaming across files, etc.
