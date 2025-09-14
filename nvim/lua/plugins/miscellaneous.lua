@@ -2,6 +2,10 @@ return {
     {
         "tpope/vim-sleuth",
     },
+    -- python indentation settings
+    {
+        "Vimjas/vim-python-pep8-indent",
+    },
     {
         "echasnovski/mini.nvim",
         config = function()
