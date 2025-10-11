@@ -26,5 +26,7 @@ require("lazy").setup({
     checker = { enabled = true },
     -- only show last 4 commits in updates
     git = { log = { "-4" } },
+    -- disable luarocks
+    rocks = { enabled = false },
 })
 
