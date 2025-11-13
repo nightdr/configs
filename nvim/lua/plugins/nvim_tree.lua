@@ -17,15 +17,6 @@ return {
                     vim.cmd("NvimTreeToggle")
                 end
             )
-
-            -- open tree by default
-            require("nvim-tree.api").tree.toggle({ focus=false })
-            -- switch to normal window since tree gets focused due to window race condition
-            vim.schedule(
-                function ()
-                    vim.cmd("wincmd l")
-                end
-            )
         end,
     },
 }
