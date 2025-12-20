@@ -10,9 +10,9 @@ return {
 
             -- toggle tree
             map(
-                -- equivalent to <A-F1>, use insert mode -> <C-V> YOUR_KEY to see what the mapping is
-                --  see https://vimhelp.org/insert.txt.html#i_CTRL-V for more detail
-                "<F49>",
+                -- can use insert mode -> <C-V> YOUR_KEY to see what the mapping is
+                -- see https://vimhelp.org/insert.txt.html#i_CTRL-V for more detail
+                "<leader>1",
                 function ()
                     vim.cmd("NvimTreeToggle")
                 end
