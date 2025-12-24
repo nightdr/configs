@@ -6,6 +6,13 @@ return {
     {
         "Vimjas/vim-python-pep8-indent",
     },
+    -- undo tree with <leader> 2 as the shortcut to open the history
+    {
+        "mbbill/undotree",
+        config = function()
+            vim.keymap.set("n", "<leader>2", vim.cmd.UndotreeToggle);
+        end,
+    },
     {
         "echasnovski/mini.nvim",
         config = function()
